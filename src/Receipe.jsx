@@ -1,19 +1,20 @@
 import React from "react";
+import IngredientList from "./IngredientList";
 
 export default function Receipe(props) {
+
    
     const {
-        id,
+      
         name,
         servings,
         cookTime,
-        instructions
+        instructions,
+        ingredients
     } = props
 
-    console.log("name is", name)
-    console.log("serving is", servings)
-    console.log("cookTime is", cookTime)
-    console.log("instructions is", instructions)
+   
+   
   return (
     <div>
       <div>
@@ -34,6 +35,10 @@ export default function Receipe(props) {
       <div>
           <span> Instructions : </span>
           <span> {instructions} </span>
+      </div>
+      <div>
+          <span> Ingredients : </span>
+          <span> <IngredientList ingredients={ingredients}/> </span>
       </div>
 
     </div>
